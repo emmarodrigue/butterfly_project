@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homelessness in America</title>
+</head> 
+
+<div class="w3-content">
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+      <br>
+      <h1 class="title" style="color:#c26a3a;">Homelessness in America</h1>
+      <br>
+      <p class="w3-justify" style="text-align:center !important;font-size:20px;color:#c19a84">
+        Over 1.5 billion people don't have adequate housing.
+      </p>
+      </div>
+    </div>
+</div>
+
+<div class="w3-row-padding w3-container" style="background-color:#fcf7f5">
+    <br>
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <i class="fa fa-coffee w3-text-red w3-margin-right"></i>
+      </div>
+      <div class="w3-threequarter" style="float:left">
+        <h1 style="font-size: 30px; color:#c26a3a;">What Causes Homelessness</h1>
+      <p class="w3-text-grey" style="color:#6B4732 !important">There are several reasons why one might become homeless such as stagnant wages, unemployment, unaffordable healthcare, poverty, mental illnesses, and racial inequality to name a few. </p>
+       <div>
+            <img src="static\images\Causes-of-Homelessness.jpg" class="my-images" width="400" alt="My Image" />
+        </div>  
+      </div>
+    </div>
+</div>
+
+<div class="w3-row-padding w3-container" style="background-color:#fff4f0">
+    <br>
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <i class="fa fa-coffee w3-text-red w3-margin-right"></i>
+      </div>
+      <div class="w3-threequarter" style="float:left">
+        <h1 style="font-size: 30px; color:#c26a3a;">Who Experience Homelessness</h1>
+        <p class="w3-text-grey" style="color:#6B4732 !important">The type of people experiencing homelessness are mostly from major cities. According to the National League of Cities, 16 percent of people who experience homelessness misuse substances and approximately 20 percent of people have a severe mental illness. </p>
+
+        <p class="w3-text-grey" style="color:#6B4732 !important"> When it comes to the U.S, nearly half of all people experiencing sheltered homelessness in the country were in four states: New York (23% or 76,051 people); California (16% or 51,429 people); Massachusetts (4% or 13,944 people); and Florida (4% or 13,393)</p>
+
+        <p class="w3-text-grey" style="color:#6B4732 !important"> Moreover, we see that men are more likely to experience homelessness than any other group. As for the younger generation, the number of homeless children in America is estimated at 1.6 million. However, many estimates suggest the number could be far higher due to the fact that homeless statistics are under-reported at city, county and state levels. </p>    
+      </div>
+    </div>
+</div>
+
+<div class="w3-row-padding w3-container" style="background-color:#fcf7f5">
+    <br>
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <i class="fa fa-coffee w3-text-red w3-margin-right"></i>
+      </div>
+      <div class="w3-threequarter" style="float:left">
+        <h1 style="font-size: 30px; color:#c26a3a;">Homelessness Statistics</h1>
+        <p class="w3-text-grey" style="color:#6B4732 !important">
+            Here are some major homelessness statistics from <a href="https://www.thn.org/2022/07/06/2022-pit/#:~:text=The%20Texas%20BoS%20CoC%20counted,Housing%2C%20and%203555%20Unsheltered%20people." style="font-weight:bold" target="_blank">The Texas Homeless Network:</a>
+        <ul style="color:#6B4732 !important">
+            <li><b>5,392</b> adults over the age of 25</li>
+            <li><b>1,108</b> children between the ages of 0-17</li>
+            <li><b>554</b> youth between the ages of 18-24</li>
+            <li><b>40%</b> of respondents were Hispanic or Latino</li>
+            <li><b>22%</b> of people experiencing homelessness were Black or African American, despite only making up 8% of our total population</li>
+            <li><b>15%</b> were survivors of domestic violence</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+</div>
+
+<style>
+.my-images { 
+top:-50px; 
+left:-35px; 
+display:block; 
+z-index:999; 
+cursor: pointer; 
+-webkit-transition-property: all; 
+-webkit-transition-duration: 0.3s; 
+-webkit-transition-timing-function: ease; 
+} 
+
+/*change the number below to scale to the appropriate size*/ 
+.my-images:hover { 
+transform: scale(3); 
+
+}
+</style>
+
+{% endblock content %}

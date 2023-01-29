@@ -1,0 +1,50 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="{% static 'stylesheets/style.css' %}">
+</head>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/" style="text-decoration: none;">
+        <img class="logo" src="{% static 'images/logo-bar.jpg' %}">
+    </a>
+    <a href="/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="/resources" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Resources</a>
+    <a href="/homelessness_in_america" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Homelessness in America</a>
+    <a href="/how_to_help" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">How to Help</a>
+    <input type="text" placeholder="Search..">
+    <button type="button" class="btn btn-danger">Search</button>
+    {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white account">Logout</a>
+    {% endif %}
+    {% if user.is_authenticated %}
+        <a href="{% url 'account' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white account">My Account</a>
+    {% else %}
+        <a href="{% url 'login' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white account">Sign In</a>
+    {% endif %}
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="/resources" class="w3-bar-item w3-button w3-padding-large">Resources</a>
+    <a href="/homelessness_in_america" class="w3-bar-item w3-button w3-padding-large">Homelessness in America</a>
+    <a href="/how_to_help" class="w3-bar-item w3-button w3-padding-large">How to Help</a>
+  </div>
+</div>
+
+<div class="content" style="background-color: #fff4f0;">
+    {% if messages %}
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    {% endif %}
+    {% block content %} {% endblock %}
+</div>
+</html>

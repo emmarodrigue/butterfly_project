@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <title>Saved Resources</title>
+    <link rel="stylesheet" href="{% static 'stylesheets/account.css' %}">
+</head>
+
+<div>
+  <div class="main">
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-form">
+                        <h2 class="form-title">Saved Resources</h2>
+                        <div class="form-group">
+                            <h2 class="title" style="font-weight: bold; color:#c26a3a;font-size:15px;"><a href="{% url 'how_to_help' %}">How YOU Can Help End Homelessness</a></h2>
+                            <p class="w3-justify" style="text-align:left !important;font-size:20px;color:#c19a84;font-size:12px">While the
+                                causes and solutions to homelessness are extemely complex, there is still so much that an individual or
+                                community can do to help. Regardless of your skills, interests, age, or resources, there are ways that you
+                                can make a difference for those who are experiencing homelessness. Volunteer work, advocacy efforts,
+                                contributions, and continued self-education are all vital as we work towards finding a solution. Some
+                                suggestions are listed below.</p>
+                        </div>
+                        <div class="form-group">
+                            <h2 class="title" style="font-weight: bold; color:#c26a3a;font-size:15px;"><a href="/food">Accessing Food</a></h2>
+                            <p class="w3-justify" style="text-align:left !important;font-size:20px;color:#c19a84;font-size:12px">Shelters typically
+                            provide food to those who are experiencing homelessness. Find a shelter near you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+{% endblock content %}

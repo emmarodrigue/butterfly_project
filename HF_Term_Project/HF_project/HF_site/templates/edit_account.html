@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <title>Edit Account</title>
+    <link rel="stylesheet" href="{% static 'stylesheets/login.css' %}">
+</head>
+
+<div>
+  <div class="main">
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-form">
+                        <h2 class="form-title">Edit Account</h2>
+                        <form method="POST" class="register-form" id="login-form" style="label:display:none;">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <div class="form-group form-button">
+								<a href="{% url 'account' %}" style="text-decoration:none;">
+									<input type="button" name="back" class="form-submit" value="Go Back">
+								</a>
+                                <input type="submit" name="update" class="form-submit" value="Update Account"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+{% endblock content %}

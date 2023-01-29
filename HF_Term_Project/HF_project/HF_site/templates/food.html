@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accessing Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!-- Page content -->
+<div class="w3-content">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+    <br>
+    <h2 class="title" style="font-weight: bold; color:#c26a3a;">Accessing Food</h2>
+    <br>
+      <div class="w3-col s12" style="text-align:left">
+        <a href="" style="color:#c19a84">Save this resource</a>
+      </div>
+      <br>
+      <p class="w3-justify" style="text-align:left !important;font-size:20px;color:#c19a84">Shelters typically provide
+          food to those who are experiencing homelessness.
+          <br><a href="{% url 'resources' %}" style="color:#A4765B">Find a shelter near you</a></p>
+      <br>
+      <p class="w3-justify" style="text-align:left !important;font-size:20px;color:#c19a84">Feeding America offers a
+          food bank locator to help you find a food bank in your community.
+          <br><a href="http://www.feedingamerica.org/find-your-local-foodbank/" style="color:#A4765B">Locate a food bank</a></p>
+      <br>
+      <p class="w3-justify" style="text-align:left !important;font-size:20px;color:#c19a84">The Women, Infants, and
+          Children (WIC) program has supplemental nutritious foods, nutrition education, as well as screening and referrals
+          to other health, welfare, and social services.
+          <br><a href="https://www.fns.usda.gov/wic/wic-contacts" style="color:#A4765B">Find WIC services in your area</a></p>
+      <br>
+      <p class="w3-justify" style="text-align:left !important;font-size:20px;color:#c19a84">The Supplemental Nutrition
+          Assistance Program (SNAP) offers nutrition assistance to millions of eligible, low-income individuals and families.
+          <br><a href="https://www.fns.usda.gov/snap/snap-application-and-local-office-locators" style="color:#A4765B">Find</a>
+       or <a href="https://www.fns.usda.gov/snap/state-informationhotline-numbers">call</a> your local SNAP office | Call the national information line 1-800-221-5689</p>
+  </div>
+</div>
+
+{% endblock content %}

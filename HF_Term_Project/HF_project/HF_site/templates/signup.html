@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'stylesheets/login.css' %}">
+</head>
+
+<div class="main" style="background-color:transparent";>
+    <section class="signup">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Sign up</h2>
+                    <form method="POST" class="register-form" id="register-form" action="{% url 'register_user' %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            {{form.username}}
+                        </div>
+                        <div class="form-group">
+                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                            {{form.password1}}
+                        </div>
+                        <div class="form-group">
+                            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                            {{form.password2}}
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" name="signup" id="signup" class="form-submit" value="Register" name="Create User"/>
+                        </div>
+                    </form>
+                    {{form.errors}}
+                </div>
+                <div class="signup-image">
+                    <figure><img src="{% static 'images/signup-image.png' %}" class="img" style="height: 300px;"></figure>
+                    <a href="{% url 'login' %}" class="already-member" style="color: black;">I already have an account</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+var form_fields = document.getElementsByTagName('input')
+form_fields[1].placeholder='Username';
+form_fields[2].placeholder='Enter password...';
+form_fields[3].placeholder='Re-enter Password...';
+
+for (var field in form_fields){
+  form_fields[field].className += ' form-control'
+}
+</script>
+
+{% endblock content %}

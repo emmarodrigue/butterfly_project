@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resources for YOU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!-- Page content -->
+<div class="w3-content">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+    <br>
+    <h2 class="title" style="font-weight: bold; color:#c26a3a;">Based on your responses, you may find the following resources the most helpful:</h2>
+    <br>
+      <br>
+      <p class="w3-justify" style="text-align:left !important;font-size:20px;color:#c19a84">
+          <a href="{% url 'food' %}" style="color:#A4765B">Find food and available options near you</a></p>
+      <br>
+      <p class="w3-justify" style="text-align:left !important;font-size:20px;color:#c19a84">
+          <a href="{% url 'specific_populations' %}" style="color:#A4765B">Locate resources for veterans available to you</a></p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+  </div>
+</div>
+
+{% endblock content %}

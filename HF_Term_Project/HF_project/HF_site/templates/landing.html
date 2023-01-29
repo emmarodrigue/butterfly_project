@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+  <meta charset="UTF-8">
+  <title>The Butterfly Effect</title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+
+  /* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+/* Snapchat */
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+</style>
+
+<!-- Header -->
+<header class="w3-container w3-sand w3-center" style="padding:128px 20px; height: 700px;">
+  <h1 class="w3-margin w3-jumbo">The Butterfly Effect</h1>
+  <p class="w3-xlarge">We grow by making little great changes</p>
+  <button onclick="scrollDown()" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Find Out More</button>
+</header>
+
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1 style="font-weight: bold; color:#c26a3a;">Learn How You Can Help</h1>
+      <h5 class="w3-padding-32" style="color:#6B4732">The causes and solutions to homelessness are extremely complex, but that doesn't mean
+        that there is nothing that can be done on the individual level.</h5>
+      <p style="color:#A4765B"><a href="{% url 'how_to_help' %}">Check out our page on how you can help end homelessness!</a></p>
+    </div>
+    <div class="w3-third w3-center">
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container" style="background-color:#fcf7f5">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="w3-padding-64 w3-text-red w3-margin-right"></i>
+    </div>
+    <div class="w3-twothird" id="who_we_are">
+      <h1 style="font-weight: bold; color:#c26a3a;">Who We Are</h1>
+      <h5 class="w3-padding-32" style="color:#6B4732">butterfly effect [noun]: a property of chaotic systems (such as the atmosphere) by which
+        small changes in initial conditions can lead to large-scale variations in the future state of the system.</h5>
+      <p style="color:#A4765B">The Butterfly Effect is a project aimed at helping those who are experiencing homeless, or
+        those who would like to help, find the resources that they need in order to make greater and better changes for their
+        futures. We believe that even the smallest changes in one's everyday life can have a positive impact on the future of
+        not only the individual, but all of those around them.</p>
+    </div>
+  </div>
+</div>
+
+<div>
+  <center>
+    <h2>Follow Us On Social Media</h3>
+    <a href="#" class="fa fa-facebook" style="margin: 20px;"></a>
+    <a href="#" class="fa fa-twitter" style="margin: 20px;"></a>
+    <a href="#" class="fa fa-instagram" style="margin: 20px;"></a>
+    <a href="#" class="fa fa-snapchat-ghost" style="margin: 20px;"></a>
+  </center>
+</div>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function scrollDown() {
+    var elementToView = document.getElementById("who_we_are");
+    elementToView.scrollIntoView({behavior: "smooth"});
+}
+</script>
+{% endblock content %}

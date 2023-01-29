@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>How to Help</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!-- Page content -->
+<div class="w3-content">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+    <br>
+    <h2 class="title" style="font-weight: bold; color:#c26a3a;">How YOU Can Help End Homelessness</h2>
+    <br>
+    <div class="w3-col s12" style="text-align:left">
+        <a href="" style="color:#c19a84">Save this resource</a>
+    </div>
+    <br>
+    <p class="w3-justify" style="text-align:center !important;font-size:20px;color:#c19a84">While the causes and solutions to homelessness are extemely complex, there is still so much
+      that an individual or community can do to help. Regardless of your skills, interests, age, or resources, there
+      are ways that you can make a difference for those who are experiencing homelessness. Volunteer work, advocacy
+      efforts, contributions, and continued self-education are all vital as we work towards finding a solution. Some
+      suggestions are listed below.</p>
+    <div class="w3-col s12" style="text-align:left">
+    </div>
+  </div>
+</div>
+<div class="w3-row-padding w3-container" style="background-color: #fcf7f5">
+  <br>
+  <div class="w3-content">
+    <div class="w3-threequarter">
+      <h1 style="font-size:30px;color:#c26a3a;">Volunteer</h1>
+      <h5 class="w3-padding-32" style="text-align:left; color:#6B4732">Volunteering your time to help directly is one of the best
+        ways to learn about homelessness and to help the immediate needs of those who are experiencing homelessness.
+        There is always a lot of available "behind the scenes" work to be done at homeless shelters, such as filing,
+        sorting clothes, helping to prepare meals, etc. Take into consideration what you enjoy and what you think you
+        may be best at, whether that is working with individuals or groups, with men, women, or children, cooking, and
+        so on. The next step is to <a href="{% url 'resources' %}">find and call</a> a few places near you, ask what they
+        need help with, and arrange a time to visit.</h5>
+      <p class="w3-text-grey" style="font-weight:bold; color:#A4765B !important">Here are some ways that you may be able to help:</p>
+      <ul class="w3-text-grey">
+        <li style="color:#A4765B"><a style="font-weight:bold;">Work at a shelter. </a>Take some time out of your day to help a nearby shelter
+          with clerical work, such as answering phones, typing, filing, or sorting mail. You can also serve food, wash
+          dishes, or sort and distribute clothes.</li>
+        <li style="color:#A4765B"><a style="font-weight:bold">Help build or fix up houses or shelters.</a> Check with your local public housing
+          authority or find the nearest chapter of Habitat for Humanity by calling 800-422-4828 or by visiting
+          <a href="https://www.habitat.org">https://www.habitat.org/</a></li>
+        <li style="color:#A4765B"><a style="font-weight:bold">Organize an event at a shelter.</a> Plan a program such as a bingo or chess night,
+          an open mic poetry, storytelling, or more at a homeless shelter.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="w3-row-padding w3-container" style="background-color:#fff4f0">
+  <br>
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+    </div>
+    <div class="w3-threequarter" style="float:right">
+      <h1 style="font-size: 30px; text-align:right;color:#c26a3a;">Advocate</h1>
+      <h5 class="w3-padding-32" style="text-align:right;color:#6B4732">Advocacy is vital to creating the systemic changes needed to end homelessness in America.
+        Advocacy means working with people who are experiencing homelessness in order to bring about positive changes in
+        policies and programs on the local, state, and federal levels. This involves working with various sectors of the
+        community, such as city offices, members of Congress, and direct service providers.</h5>
+      <p class="w3-text-grey" style="font-weight:bold; color:#A4765B !important">Here are some ways that you may be able to help:</p>
+      <ul class="w3-text-grey">
+        <li style="color:#A4765B"><a style="font-weight:bold">Get connected to a coalition.</a> Volunteer at your local, state, or national housing or homeless advocacy
+          coalition, or make a financial contribution to support their work. </li>
+        <li style="color:#A4765B"><a style="font-weight:bold">Follow local politics. </a>Attend neighborhood and public meetings and speak up in favor of low-income housing,
+          group homes, shelters, and homelessness prevention programs.</li>
+        <li style="color:#A4765B"><a style="font-weight:bold">Register people experiencing homelessness to vote.</a> The "You Don't Need A Home to Vote" nonpartisan voter
+          registration/education/get-out-to-vote campaign occurs nationwide each election cycle. The National Homeless
+          and Low-Income Voter Registration Week occurs every year during the last week of September, and provides a
+          week of registration events aimed specifically at registering voters who are unhoused.</li>
+        <li style="color:#A4765B"><a style="font-weight:bold">Become more aware of your language.</a> People who are experiencing homelessness are still people and should be
+          respected and treated as such. Try to minimize vocabulary that refers to people who are experiencing
+          homelessness in derogatory ways. Expressions such as "people experiencing homelessness" rather than labels
+          like "bum," "transient," or even "the homeless," reminds us that people who are in such situations are still
+          <a style="font-style:italic">people</a> first - just people who are going through something incredibly difficult in their lives.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="w3-row-padding w3-container" style="background-color: #fcf7f5">
+  <div class="w3-content">
+    <div class="w3-threequarter">
+      <br>
+      <h1 style="font-size: 30px;color:#c26a3a;">Contribute</h1>
+      <h5 class="w3-padding-32" style="text-align:left;color:#6B4732">While volunteer work and advocacy are essential, material
+        assistance is also very necessary. Escaping homelessness is a very long and tedious process, and in the meantime,
+        people experiencing homelessness and the programs that serve them need help everyday.</h5>
+      <p class="w3-text-grey" style="font-weight:bold; color:#A4765B !important">Items and services that may be needed near you:</p>
+      <ul class="w3-text-grey">
+        <li style="color:#A4765B"><a style="font-weight:bold">Clothing.</a> Lack of clean and well-fitting clothing and shoes causes great
+          hardship against the elements, and it hurts one's self-image and one's chance to get ahead in life. People
+          experiencing homelessness need to travel light, and have very few, if any at all, opportunities to safely
+          store or clean what they can't carry. Poorly dressed people have less of a chance of getting jobs and success.
+          Consider donating your clean clothes to those who can use them. <a href="{% url 'resources' %}">Find your local
+          shelter</a> to see what clothing items they may need most before starting a clothing drive or similar.
+        </li>
+        <li style="color:#A4765B"><a style="font-weight:bold">Household goods or other items.</a> Kitchen utensils, furniture, toys, games,
+          stuffed animals, etc. are always welcomed at shelters.
+        </li>
+        <li style="color:#A4765B"><a style="font-weight:bold">"Survival kits."</a> Create and distribute kits that include necessities, such as
+          cups, utensils, soap, shampoo, toothpaste, toothbrushes, pots, pans, etc. During the colder months, consider
+          organizing drives for blankets, coats, hats, socks, and the like.
+        </li>
+      </ul>
+      <br>
+    </div>
+  </div>
+</div>
+
+<script>
+  const save_button = document.querySelector(".save-button");
+  function save() {}
+  save_button.addEventListener("click", save);
+</script>
+
+{% endblock content %}

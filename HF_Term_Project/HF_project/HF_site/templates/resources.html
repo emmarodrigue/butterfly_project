@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<head xmlns="http://www.w3.org/1999/html">
+    <title>Resources</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+
+  /* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+/* Snapchat */
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+</style>
+
+<div class="w3-content">
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+        <br>
+        <h1 class="title" style="color:#c26a3a;">Not Sure Where To Start? Let Us Help You!</h1>
+        <br>
+        <p class="w3-justify" style="text-align:center !important;font-size:20px;color:#c19a84">
+        Answer few a <a href="#questionnaire">questions</a> and we can help you find the best resources for you!
+        </p>
+    </div>
+</div>
+<div class="w3-row-padding w3-container" style="background-color: #fcf7f5; text-align:left">
+    <br>
+    <div class="w3-content">
+      <div class="w3-threequarter">
+        <h1 style="font-size:30px;color:#c26a3a;">Accessing Shelter or Housing services</h1>
+        <h5 class="w3-padding-32" style="text-align:left; color:#6B4732">
+            If you are at risk of or currently experiencing homelessness, the first step is to get in touch with 
+            the shelter system in your community. There are numerous resources available, such as hotlines or community 
+            organizations for homeless services. Many communities have a "homeless hotline," "2-1-1, " or other organizations/agencies 
+            that serve as the "front door" to receiving any kind of help. 
+        </h5>
+      </div>
+    </div>
+</div>
+<div class="w3-row-padding w3-container" style="background-color:#fff4f0;">
+    <br>
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <i class="fa w3-margin-right"></i>
+      </div>
+      <div class="w3-threequarter" style="float:left">
+          <h1 style="font-size: 30px; color:#c26a3a;">Getting in Touch with the Shelter System in Your Community</h1>
+          <h5 class="w3-padding-32" style="text-align:left;color:#6B4732">A 2-1-1 hotline is an option in many areas and provides insights from trained professionals who can
+            assist with services such as finding shelter, housing, or other resources.<br><a href="https://www.211.org/" style="font-weight:bold" target="_blank">Find your community's 2-1-1 hotline</a> | Call 2-1-1</h5>
+        <h5 class="w3-padding-32" style="text-align:left;color:#6B4732">
+            <a href="https://nationalhomeless.org/" style="font-weight:bold; text-align:left">The National Coalition for the Homeless</a>
+            offers basic information on how people experiencing homelessness can get help and access to resources. 
+        </h5>
+
+        <h5 class="w3-padding-32" style="text-align:left;color:#6B4732">
+            If your community does not have the above resources easily available, a good place to start looking for various providers is the
+            County Department of Human or Social services, a nearby church, social service non-profit, library, or a food pantry.
+        </h5>
+      </div>
+    </div>
+</div>
+<div class="w3-row-padding w3-container" style="background-color: #fcf7f5">
+    <br>
+    <div class="w3-content">
+        <div class="w3-threequarter">
+            <h1 style="font-size:30px;color:#c26a3a;">Exploring Options Other Than Shelter</h1>
+            <h5 class="w3-padding-32" style="text-align:left; color:#6B4732">
+            Safe alternatives to shelters are often a much better way of addressing or resolving housing crises. 
+            Many provider staff from hotlines may try to help you maintain your current housing and resolve conflicts 
+            that are keeping you from staying there. If you are not yet homeless, it may be possible to avoid homelessness 
+            by finding out about prevention or emergency assistance programs in your area, which can help with paying rent,
+              utilities, or other bills.</h5>
+            <div class="w3-row-padding">
+                <div class="w3-col s4" style="font-size:15px;color:#6B4732"><a href="{% url 'healthcare' %}"/>Healthcare Options</div>
+                <div class="w3-col s4" style="font-size:15px;color:#6B4732"><a href="{% url 'food' %}"/>Accessing Food</div>
+                <div class="w3-col s4" style="font-size:15px;color:#6B4732"><a/>Help for Specific Populations</div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+<div class="w3-row-padding w3-container" style="background-color: #fff4f0">
+    <br>
+    <div class="w3-content" id="questionnaire">
+        <div class="w3-threequarter">
+            <h1 style="font-size:30px;color:#c26a3a; text-align: left;">Questionnaire</h1>
+            <h5 class="w3-padding-28" style="text-align:left; color:#6B4732"> 1. What is your date of birth? </h5>
+                <input class="form-check-input" type="date">
+            <h5 class="w3-padding-32" style="text-align:left; color:#6B4732">2. Are you a veteran? <br>
+                <input type="radio" name="flexRadioDefault" id="flexRadioDefault1"> Yes
+                <input type="radio" name="flexRadioDefault" id="flexRadioDefault2"> No
+            <h5 class="w3-padding-32" style="text-align:left; color:#6B4732"> 3. What are you most interested in finding? <br>
+                <input type="checkbox"> Food <br>
+                <input type="checkbox"> Clothing <br>
+                <input type="checkbox"> Shelter <br>
+            <h5 class="w3-padding-28" style="text-align:left; color:#6B4732"> 4. What is your nearest location? <br>
+                <input type="checkbox"> Austin <br>
+                <input type="checkbox"> San Marcos <br>
+                <input type="checkbox"> San Antonio <br>
+            </h5>
+                <br>
+        <button type="submit" style="display: inline-block;background: #f5c8b0;color: #c97e57;font-weight:
+                bold;border-bottom: none;width: auto;padding: 10px 29px;border-radius: 2px;-moz-border-radius: 2px;
+                -webkit-border-radius: 2px;-o-border-radius: 2px;-ms-border-radius: 2px;margin-top: 15px;cursor:
+                pointer;"><a href="{% url 'answer' %}"/>Submit</button>
+        </div>
+    </div>
+</div>
+
+<div style="text-align:center">
+    <h3>Follow Us On Social Media</h3>
+    <a href="" class="fa fa-facebook" style="margin: 20px;"></a>
+    <a href="" class="fa fa-twitter" style="margin: 20px;"></a>
+    <a href="" class="fa fa-instagram" style="margin: 20px;"></a>
+    <a href="" class="fa fa-snapchat-ghost" style="margin: 20px;"></a>
+</div>
+
+{% endblock content %}
